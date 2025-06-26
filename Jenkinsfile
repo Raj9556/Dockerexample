@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t srk96/dp-alpine:latest .'
+        sh '/usr/local/bin/docker build -t srk96/dp-alpine:latest .'
       }
     }
     stage('Login') {
