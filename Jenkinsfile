@@ -16,13 +16,13 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push srk96/dp-alpine:latest'
+        sh '/usr/local/bin/docker push srk96/dp-alpine:latest'
       }
     }
   }
   post {
     always {
-      sh 'docker logout'
+      sh '/usr/local/bin/docker logout'
     }
   }
 }
